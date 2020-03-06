@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Decode-Basic</Name>
+                <Condition>request.header.Authorization != null</Condition>
+            </Step>
+            <Step>
+                <Name>Extract-Variables</Name>
+                <Condition>(credentials.username) = null or (credentials.password = null)</Condition>
+            </Step>
+            <Step>
+                <Name>Verify-username</Name>
+            </Step>
+            <Step>
+                <Name>Check-Password</Name>
+            </Step>
+            <Step>
+                <Name>Raise-Unauthorized</Name>
+                <Condition>bcrypt_result = false</Condition>
+            </Step>
+            <Step>
+                <Name>Parse-Cred-Check</Name>
+            </Step>
+            <Step>
+                <Name>Raise-Wrongpath</Name>
+                <Condition>bpathresult = false</Condition>
+            </Step>
+            <Step>
+                <Name>Quota</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PostClientFlow>
+        <Request/>
+        <Response/>
+    </PostClientFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/supply-xml</BasePath>
+        <VirtualHost>apigee-test.gw.booking.com</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

@@ -1,0 +1,795 @@
+[
+  {
+    "description": "\tAs Httpbin client I want to use variables in my feature files",
+    "keyword": "Feature",
+    "name": "",
+    "line": 2,
+    "id": "",
+    "tags": [
+      {
+        "name": "@core",
+        "line": 1
+      }
+    ],
+    "uri": "features/scope-test.feature",
+    "elements": [
+      {
+        "id": ";readonlyapp-with-read-only-scope-while-trying-to-read.-should-be-successful",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "ReadOnlyApp with read only scope while trying to read. Should be successful",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials&scope=urn:scopecase:read with clientid `ScopeCaseReadOnlyApp.consumerKey` and secret `ScopeCaseReadOnlyApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1062000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I GET /scopecase/read",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 265000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";readonlyapp-with-read-only-scope-while-trying-to-write.-should-be-fail-with-a-401",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "ReadOnlyApp with read only scope while trying to write. Should be fail with a 401",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials&scope=urn:scopecase:read with clientid `ScopeCaseReadOnlyApp.consumerKey` and secret `ScopeCaseReadOnlyApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 503000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I POST to /scopecase/write",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 223000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "response code should be 401",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": ";readonlyapp-without-specifying-scope-at-all-while-trying-to-read.-should-succeed",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "ReadOnlyApp without specifying scope at all while trying to read. Should succeed",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials with clientid `ScopeCaseReadOnlyApp.consumerKey` and secret `ScopeCaseReadOnlyApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 638000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I GET /scopecase/read",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 541000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";readwriteapp-with-read-only-scope-while-trying-to-read.-should-be-successful",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "ReadWriteApp with read only scope while trying to read. Should be successful",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials&scope=urn:scopecase:read with clientid `ScopeCaseReadWriteApp.consumerKey` and secret `ScopeCaseReadWriteApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 361000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I GET /scopecase/read",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";readwriteapp-with-read-only-scope-while-trying-to-write.-should-be-fail-with-a-403",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "ReadWriteApp with read only scope while trying to write. Should be fail with a 403",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 40,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials&scope=urn:scopecase:read with clientid `ScopeCaseReadWriteApp.consumerKey` and secret `ScopeCaseReadWriteApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 145000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "I POST to /scopecase/write",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "response code should be 403",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2000000,
+              "error_message": "Error: stepContext: \ntestOutput: \n  success:  false\n  expected: 403\n  actual:   200\n  response: \n    statusCode: 200\n    headers: \n      date:              Fri, 21 Feb 2020 14:01:41 GMT\n      content-type:      application/json\n      content-length:    118\n      connection:        close\n      host:              demo-eu07-test.apigee.net\n      x-forwarded-for:   193.106.224.143\n      x-forwarded-port:  443\n      x-forwarded-proto: https\n      authorization:     Bearer G9hrNuCb3eCGILitmfKgBjChsuKv\n    body: \n      \"\"\"\n        \n                    {\n                        \"message\":\"You have hit /write\",\n                        \"code\": 200\n                        }\n                \n      \"\"\"\n    at Function.<anonymous> (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/cucumber/lib/user_code_runner.js:107:21)\n    at Generator.throw (<anonymous>)\n    at Generator.tryCatcher (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/util.js:16:23)\n    at PromiseSpawn._promiseRejected (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/generators.js:107:10)\n    at Promise._settlePromise (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:576:26)\n    at Promise._settlePromise0 (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:614:10)\n    at Promise._settlePromises (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/promise.js:690:18)\n    at _drainQueueStep (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:138:12)\n    at _drainQueue (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:131:9)\n    at Async._drainQueues (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:147:5)\n    at Immediate.Async.drainQueues (/Users/gsjurseth/git/apigee-oauth-app-scopes/test/integration/node_modules/bluebird/js/release/async.js:17:14)\n    at runCallback (timers.js:789:20)\n    at tryOnImmediate (timers.js:751:5)\n    at processImmediate [as _immediateCallback] (timers.js:722:5)"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";readwriteapp-without-specifying-scope-at-all-while-trying-to-read.-should-succeed",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "ReadWriteApp without specifying scope at all while trying to read. Should succeed",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials with clientid `ScopeCaseReadWriteApp.consumerKey` and secret `ScopeCaseReadWriteApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 52,
+            "name": "I GET /scopecase/read",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:91"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 141000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 53,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": ";readwriteapp-without-specifying-scope-at-all-while-trying-to-write.-should-succeed",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "ReadWriteApp without specifying scope at all while trying to write. Should succeed",
+        "tags": [
+          {
+            "name": "@core",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/init.js:11"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 56,
+            "name": "I perform a client_credentials grant to /oauth/client_credential/accesstoken?grant_type=client_credentials with clientid `ScopeCaseReadWriteApp.consumerKey` and secret `ScopeCaseReadWriteApp.consumerSecret`",
+            "match": {
+              "location": "features/step_definitions/apickli-gherkin.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 174000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "I store the raw value $.access_token as myTokenPath in scenario scope",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:243"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I store the value of body path `myTokenPath` as access token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:233"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "I set bearer token",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:238"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 60,
+            "name": "I POST to /scopecase/write",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 61,
+            "name": "response code should be 200",
+            "match": {
+              "location": "node_modules/apickli/apickli-gherkin.js:167"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XSL async="false" continueOnError="false" enabled="true" name="XSLT-Error">
+    <DisplayName>XSLT Error</DisplayName>
+    <Properties/>
+    <Source>request</Source>
+    <ResourceURL>xsl://XSLT-Error.xsl</ResourceURL>
+    <Parameters ignoreUnresolvedVariables="true"/>
+    <OutputVariable>ErrorContent</OutputVariable>
+</XSL>
