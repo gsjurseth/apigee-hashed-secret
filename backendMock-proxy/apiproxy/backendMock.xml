@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="backendMock">
+    <Basepaths>/backendmock</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1584547439623</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>backendMock</DisplayName>
+    <LastModifiedAt>1584547439623</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:0f4dbe5c2c9dcbd7cd46168736f8f5cb365df9fc10c25a555117fb3ccd470736907f56cc823f3867ecb97374e68fbfdba48b0d8b07db987130b93f17d2dd9438</ManifestVersion>
+    <Policies>
+        <Policy>AMsetPayload</Policy>
+        <Policy>KVM.getPrivateKey</Policy>
+        <Policy>VerifyAPIKey</Policy>
+        <Policy>VerifyJWT</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AMsetJWTHeader">
+    <DisplayName>AM.setJWTHeader</DisplayName>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="X-JWT">{jwt}</Header>
+            <Header name="X-PRIVATEJWT">{private.jwtkey}</Header>
+        </Headers>
+    </Add>
+</AssignMessage>

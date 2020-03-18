@@ -1,0 +1,11 @@
+[
+    {
+        "entry": [
+            {
+                "name": "privkey",
+                "value": "I Am A Big Secret"
+            }
+        ],
+        "name": "jwt-private-key"
+    }
+]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AMsetJWTHeader" version="SHA-512:50927484eb1f469e579e60de061711ddc313447ba85ab7b59e6fdd60a5f7523a62f084790b396fee2037c4620a62b13b710fb04fb7f0f290cbf53a6cf9ea8a3b"/>
+        <VersionInfo resourceName="Check-Password" version="SHA-512:e5f00f0e422fcb4cb6c489c373d0703973ca4792c0f4c265d5fb6a19339d3d53cf865718f4c79028bbb75e42730ac75f32a94e11bcaa19e60e25567822a9c71c"/>
+        <VersionInfo resourceName="Decode-Basic" version="SHA-512:94353366c6c483097760bb647cc85d8162a9a6641bd437a94248b12ae9639b99fc3f951a994080a0eb4c8aafd51c3ae406546c816d413f1d1ec3f965acfb3095"/>
+        <VersionInfo resourceName="GenerateJWT" version="SHA-512:8b377ab5dbfdb31d251d9568c70844331493d2572468f562e8e839a71d48148f2a2f4c20411199340df8ff7343581382cdff4d0737c57d8967a08245ce5b596d"/>
+        <VersionInfo resourceName="KVM.getPrivateKey" version="SHA-512:c29474671a134323ab69da67337683f10ef367fd8517b71a339e3003577b0020a5b18165d003b2e8b8ffb89b3244f475ff19b051e313f5bf2006081584249212"/>
+        <VersionInfo resourceName="Raise-Fault-1" version="SHA-512:986e5368c5e1df8159a84bd667ca790ce714c1d969984496d7b5b509bfca84bca709583c383482b1f80ccfead4b6e1474fddb153212e0eca9536925bc630a9ee"/>
+        <VersionInfo resourceName="VerifyAPIKey" version="SHA-512:bd7756982febe76059d96d166cb9f7a83302cd3e7131d501acc8d37d6eba0a1f195d6a008361734f6d8bb59643d982c90d4b382e63547a86233766833d46ddfc"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:1f9d33345df130a128d034ce761b9c805b2c246b75470f795907a342e8f05ab17a6eb900733b5ee0e250b9784cbdae4225e7e1e60878866ecfb4caad9acf0f61"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="java://edge-bcrypt-password-check-1.0.1.jar" version="SHA-512:7aa36937fb4bb9080c454d83d0ae2e8db8ec9eab20349ecd62756d735bfa976b50eb842e7e068729c2eb612a3d70a6c4fcb859c80367eb3b13fb14fc57a34b37"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

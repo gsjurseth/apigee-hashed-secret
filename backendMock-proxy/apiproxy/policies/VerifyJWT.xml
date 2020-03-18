@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyJWT async="false" continueOnError="false" enabled="true" name="VerifyJWT">
+    <DisplayName>VerifyJWT</DisplayName>
+    <Algorithm>HS256</Algorithm>
+    <Source>request.header.X-JWT</Source>
+    <SecretKey>
+        <Value ref="private.jwtkey"/>
+    </SecretKey>
+    <Subject>subject-subject</Subject>
+    <Issuer>urn://apigee-edge-JWT-policy-test</Issuer>
+    <Audience>audience1</Audience>
+    <AdditionalClaims>
+        <Claim name="size" type="string">short_and_stout</Claim>
+    </AdditionalClaims>
+</VerifyJWT>

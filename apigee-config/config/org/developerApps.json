@@ -1,0 +1,7 @@
+{
+  "john.doe@acme.com": [{
+    "apiProducts" : [ "hashed-secret-jwt-product" ],
+    "name" : "jwtTestApp",
+    "scopes": []
+  }]
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="jwt-proxy">
+    <Basepaths>/v1/token</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1584545895050</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description></Description>
+    <DisplayName>hashed-secret-jwt</DisplayName>
+    <LastModifiedAt>1584545895050</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:74232283e4a6420da5dcafe3d0df63cb3262bd931bfc5a4a047b9e5bf0fb45fbfe99bcff2d629926739d2deb8208679907b4f75c4feb24e23210bca1c67f56d7</ManifestVersion>
+    <Policies>
+        <Policy>AMsetJWTHeader</Policy>
+        <Policy>Check-Password</Policy>
+        <Policy>Decode-Basic</Policy>
+        <Policy>GenerateJWT</Policy>
+        <Policy>KVM.getPrivateKey</Policy>
+        <Policy>Raise-Fault-1</Policy>
+        <Policy>VerifyAPIKey</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>java://edge-bcrypt-password-check-1.0.1.jar</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

@@ -1,0 +1,19 @@
+[
+  {
+      "apiResources" : [  ],
+        "approvalType" : "auto",
+        "attributes" : [ {
+          "name" : "access",
+          "value" : "public"
+        } ],
+          "createdAt" : 1571669651606,
+          "createdBy" : "gsjurseth@google.com",
+          "description" : "product for jwts via hashed-secrets",
+          "displayName" : "hashed-secret-jwt-product",
+          "environments" : [ "prod", "test"  ],
+          "lastModifiedBy" : "gsjurseth@google.com",
+          "name" : "hashed-secret-jwt-product",
+          "proxies" : [ "jwt-proxy","backendMock-proxy" ],
+          "scopes" : [  ]
+  }
+]

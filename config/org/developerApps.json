@@ -1,7 +1,0 @@
-{
-  "john.doe@acme.com": [{
-    "apiProducts" : [ "Lightning Demo APIs" ],
-    "name" : "TestApp",
-    "scopes": []
-  }]
-}

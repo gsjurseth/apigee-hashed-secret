@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AMsetPayload" version="SHA-512:29577438ba9b53b8e8720fd28d21435b07766ea6416c5c5831cdf7c49cc536e34f3514d3548161b0c2a35ceab1826c17dd13f7c7911e505c641671182b16b600"/>
+        <VersionInfo resourceName="KVM.getPrivateKey" version="SHA-512:c29474671a134323ab69da67337683f10ef367fd8517b71a339e3003577b0020a5b18165d003b2e8b8ffb89b3244f475ff19b051e313f5bf2006081584249212"/>
+        <VersionInfo resourceName="VerifyAPIKey" version="SHA-512:b00ce414e88254cc6f1597803eb282fb79b1ee8e8d80e48aa481a8506b068440c86e2f65c1aa862ca50b6dc71a97f98cf4295b819ff3f601e0a08005839aba30"/>
+        <VersionInfo resourceName="VerifyJWT" version="SHA-512:1370e9b7ce08eeca34b0c86cc5bb091e3a7838b136e413c9b22a788c8853070b31fc89dcb7c58f6f89224aa6aafdc5cde483dc4e46a29dc7c268cbdee4077862"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:864ab49b26efc3531595c7752bd45585e14b2baf4b936bb754bf808e4759fb9dfb8ddcc74fb58747e46dedc128a665f0bb503289e832e41d0a9c47adea14e509"/>
+    </ProxyEndpoints>
+    <Resources/>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

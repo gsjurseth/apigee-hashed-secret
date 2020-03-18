@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Decode-Basic</Name>
+            </Step>
+            <Step>
+                <Name>VerifyAPIKey</Name>
+            </Step>
+            <Step>
+                <Name>Check-Password</Name>
+            </Step>
+            <Step>
+                <Name>Raise-Fault-1</Name>
+                <Condition>bcrypt_result = false</Condition>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>KVM.getPrivateKey</Name>
+            </Step>
+            <Step>
+                <Name>GenerateJWT</Name>
+            </Step>
+            <Step>
+                <Name>AMsetJWTHeader</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PostClientFlow>
+        <Request/>
+        <Response/>
+    </PostClientFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/hashtest</BasePath>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default"/>
+</ProxyEndpoint>
