@@ -1,44 +1,13 @@
 [
   {
-    "name": "ScopeCaseReadWriteApp",
-    "credentials": [
-      {
-        "consumerKey": "1o26vLfsFoaUCs1GcSgWQ9oxFG85SIut",
-        "consumerSecret": "wRuBmyxvbxhaIimA",
-        "apiProducts": [
-          {
-            "apiproduct": "scopecase-ProductRead"
-          },
-          {
-            "apiproduct": "scopecase-ProductWrite"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "jwtTestApp",
     "credentials": [
       {
-        "consumerKey": "MAG0UPadVBuBKKLVwUL1mX8yFyAnQMBO",
-        "consumerSecret": "yAe4zdPcVpZ1yRXG",
+        "consumerKey": "9JrBymvLw865QbI5GGYBBEpTLhrTTFbo",
+        "consumerSecret": "a9ZGXw7J2K3NDjxq",
         "apiProducts": [
           {
             "apiproduct": "hashed-secret-jwt-product"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "ScopeCaseReadOnlyApp",
-    "credentials": [
-      {
-        "consumerKey": "7WVm2L53zds6yhgGZA6v0kiLz5y3W5IS",
-        "consumerSecret": "wZuShVGDF7AUbTk0",
-        "apiProducts": [
-          {
-            "apiproduct": "scopecase-ProductRead"
           }
         ]
       }

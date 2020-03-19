@@ -2,6 +2,12 @@
   "john.doe@acme.com": [{
     "apiProducts" : [ "hashed-secret-jwt-product" ],
     "name" : "jwtTestApp",
-    "scopes": []
+    "scopes": [],
+    "attributes": [
+      {
+        "name": "hash",
+        "value": "$2a$10$TkT.yEobtgQr/n7q//L4ZuurtVWYg/xXGFyht6pC9KP6Cz1szHd/m"
+      }
+    ]
   }]
 }

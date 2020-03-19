@@ -51,23 +51,6 @@
 		</profile>
   </profiles>
 
-  <!--
-  <pluginRepositories>
-    <pluginRepository>
-      <id>central</id>
-      <name>Maven Plugin Repository</name>
-      <url>http://repo1.maven.org/maven2</url>
-      <layout>default</layout>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-    </pluginRepository>
-  </pluginRepositories>
-  -->
-
   <build>
 
     <pluginManagement>
@@ -158,6 +141,38 @@
 					</execution>
 				</executions>
 			</plugin>
+      <plugin>
+        <groupId>org.codehaus.gmavenplus</groupId>
+        <artifactId>gmavenplus-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>update-app-creds</id>
+            <phase>install</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <scripts>
+                <script>${project.basedir}/scripts/foo.groovy</script>
+              </scripts>
+            </configuration>
+          </execution>
+        </executions>
+				<dependencies>
+					<dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>2.4.19</version>
+            <scope>runtime</scope>
+					</dependency>
+          <dependency>
+            <groupId>io.github.http-builder-ng</groupId>
+            <artifactId>http-builder-ng-core</artifactId>
+            <version>1.0.4</version>
+          </dependency>
+  				</dependencies>
+      </plugin>
     </plugins>
 
   </build>
